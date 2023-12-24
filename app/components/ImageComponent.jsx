@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 
-const ImageComponent = ({ src, width, height, alt, className }) => {
+const ImageComponent = ({ src, alt }) => {
   return (
     <Image
       src={src}
+      alt={alt}
       fill
-      objectFit='cover'
-
-      className={'rounded-md'}
+      objectFit="cover"
+      className={"rounded-md"}
     />
   );
 };

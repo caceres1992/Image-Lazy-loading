@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { getPlaiceholder } from "plaiceholder";
 
-const ImageBlur = async ({ src }) => {
+const ImageBlur = async ({ src,alt }) => {
   const buffer = await fetch(src).then(async (res) =>
     Buffer.from(await res.arrayBuffer())
   );
@@ -14,7 +14,7 @@ const ImageBlur = async ({ src }) => {
       src={src}
       blurDataURL={base64}
       fill
-      alt={"image blur"}
+      alt={alt}
       objectFit="cover"
       placeholder={"blur"}
       className={"rounded-md"}
